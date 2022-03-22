@@ -6,7 +6,7 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/03/22 12:53:51 by jcervill         ###   ########.fr        #
+#    Updated: 2022/03/22 13:13:02 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,20 @@ NAME = megaphone
 
 SRCS = megaphone.cpp
 
-CC = clang++
+CXX = clang++
 
-FLAGS = -Wall -Werror -Wextra
+OBJS = $(SRCS:.cpp=.o)
 
-$(NAME): all
+CXXFLAGS = -Wall -Werror -Wextra --std=c++98
 
-all: 
-	$(CC) $(FLAGS) $(SRCS)
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -c $(SRCS)
+	$(CXX) $(OBJS) -o $(NAME)
+
+all: $(NAME)
+
 clean:
+	rm -rf $(OBJS)
 
-fclean:
+fclean: clean
+	rm -rf $(NAME)
