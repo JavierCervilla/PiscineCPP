@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClassPhook.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:55:03 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/28 14:05:20 by jcervill         ###   ########.fr       */
+/*   Created: 2022/03/24 13:58:01 by jcervill          #+#    #+#             */
+/*   Updated: 2022/03/28 13:09:08 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include "ClassContact.hpp"
-#include "ClassPhook.hpp"
+#ifndef CLASSPHOOK_HPP
+# define CLASSPHOOK_HPP
+# include <iostream>
+# include <string>
+# include "ClassContact.hpp"
 
-int checkCmd(std::string cmd) {
-    if (std::string::strcmp(cmd, 'ADD') == 0)
-        return 1;
-}
+class Phook {
+    private: 
+        int _index;
+        Contact _contacts[8];
+    public:
+        Phook(void);
+        ~Phook(void);
+        // GETTERS
+        Contact getContactByIndex(int index);
+        // SETTERS
+        void addContact(void);
+};
 
-int main (void)
-{
-    int exit = 0;
-    std::string cmd;
-    Phook phook;
-    while(!exit)
-    {
-        std::cin >> cmd;
-        checkCmd(cmd);
-    }
-    phook.addContact();
-    return (0);
-}
+#endif

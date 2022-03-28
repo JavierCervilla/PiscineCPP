@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:55:03 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/28 14:05:20 by jcervill         ###   ########.fr       */
+/*   Created: 2022/03/28 14:05:31 by jcervill          #+#    #+#             */
+/*   Updated: 2022/03/28 14:35:29 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include "ClassContact.hpp"
-#include "ClassPhook.hpp"
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-int checkCmd(std::string cmd) {
-    if (std::string::strcmp(cmd, 'ADD') == 0)
-        return 1;
-}
+typedef enum e_cmds {
+    UNDEFINED = 0,
+    ADD = 1,
+    SEARCH = 2,
+    EXIT = 3
+}           t_cmds;
 
-int main (void)
-{
-    int exit = 0;
-    std::string cmd;
-    Phook phook;
-    while(!exit)
-    {
-        std::cin >> cmd;
-        checkCmd(cmd);
-    }
-    phook.addContact();
-    return (0);
-}
+#endif
