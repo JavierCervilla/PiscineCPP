@@ -14,9 +14,19 @@
 #include "ClassContact.hpp"
 #include "ClassPhook.hpp"
 
-int checkCmd(std::string cmd) {
-    if (std::string::strcmp(cmd, 'ADD') == 0)
-        return 1;
+int checkCmd(std::string cmd, Phook *phook) {
+    if (cmd.compare("ADD") == 0) {
+        phook->addContact();
+        return ADD;
+    }
+    if (cmd.compare("EXIT") == 0) {
+        return EXIT;
+    }
+    if (cmd.compare("SEARCH") == 0) {
+        phook->getAllContacts();
+        return SEARCH;
+    }
+    return UNDEFINED;
 }
 
 int main (void)
@@ -26,9 +36,11 @@ int main (void)
     Phook phook;
     while(!exit)
     {
+        std::cout << "Enter a command: ADD, SEARCH, EXIT" << std::endl;
         std::cin >> cmd;
-        checkCmd(cmd);
+        if (checkCmd(cmd, &phook) == EXIT)
+            exit = 1;
     }
-    phook.addContact();
+    //phook.addContact();
     return (0);
 }

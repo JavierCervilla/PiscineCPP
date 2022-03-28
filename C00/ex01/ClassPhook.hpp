@@ -25,6 +25,7 @@ class Phook {
         ~Phook(void);
         // GETTERS
         Contact getContactByIndex(int index);
+        void getAllContacts(void);
         // SETTERS
         void addContact(void);
 };

@@ -27,9 +27,16 @@ Phook::~Phook(void) {
 
 //GETTERS
 
+void Phook::getAllContacts(void) {
+    for (int i = 0; i < 8; i++) {
+       this->_contacts[i].toString();
+    }
+}
+
 //SETTERS
 void Phook::addContact(void) {
     std::cout << "New Contact:" << std::endl;
+    _contacts[this->_index % 8].setIndex(this->_index % 8);
     std::cout << "Enter first name: " << std::endl;
     std::string firstName;
     std::cin >> firstName;
@@ -52,4 +59,5 @@ void Phook::addContact(void) {
     _contacts[this->_index % 8].setDarkestSecret(darkestSecret);
     _contacts[this->_index % 8].toString();
     this->_index++;
+    std::cout << "Contact added: " << this->_index << std::endl;
 }

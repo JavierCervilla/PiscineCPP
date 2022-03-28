@@ -44,6 +44,7 @@ class Contact {
         void setDarkestSecret(std::string darkestSecret);
         // UTILS
         void toString(void);
+        void print(void);
         std::string trimField(std::string field);
 };
 

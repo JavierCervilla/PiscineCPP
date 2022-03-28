@@ -111,3 +111,12 @@ void Contact::toString(void) {
     std::cout << std::setfill (' ') << std::setw (10) << trimField(this->_phoneNumber) << "|";
     std::cout << std::setfill (' ') << std::setw (10)  << trimField(this->_darkestSecret) << std::endl;
 }
+
+void Contact::print(void) {
+    std::cout  << "Index: " << this->_index << "|";
+    std::cout  << "First name: " << this->_firstName << "|";
+    std::cout  << "Last name: " << this->_lastName << "|";
+    std::cout  << "Nickname: " << this->_nickName << "|";
+    std::cout  << "Phone: " << this->_phoneNumber << "|";
+    std::cout  << "Darkest secret: " << this->_darkestSecret << std::endl;
+}
