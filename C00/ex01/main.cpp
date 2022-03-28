@@ -19,11 +19,15 @@ int checkCmd(std::string cmd, Phook *phook) {
         phook->addContact();
         return ADD;
     }
-    if (cmd.compare("EXIT") == 0) {
+    if (cmd.compare("EXIT") == 0)
         return EXIT;
-    }
     if (cmd.compare("SEARCH") == 0) {
         phook->getAllContacts();
+        std::cout << "Enter the index of the contact you want to see: ";
+        int index;
+        std::cin >> index;
+        Contact current = phook->getContactByIndex(index);
+        current.print();
         return SEARCH;
     }
     return UNDEFINED;
@@ -41,6 +45,5 @@ int main (void)
         if (checkCmd(cmd, &phook) == EXIT)
             exit = 1;
     }
-    //phook.addContact();
     return (0);
 }

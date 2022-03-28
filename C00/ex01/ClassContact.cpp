@@ -113,10 +113,10 @@ void Contact::toString(void) {
 }
 
 void Contact::print(void) {
-    std::cout  << "Index: " << this->_index << "|";
-    std::cout  << "First name: " << this->_firstName << "|";
-    std::cout  << "Last name: " << this->_lastName << "|";
-    std::cout  << "Nickname: " << this->_nickName << "|";
-    std::cout  << "Phone: " << this->_phoneNumber << "|";
+    std::cout  << "Index: " << this->_index  << std::endl;
+    std::cout  << "First name: " << this->_firstName << std::endl;
+    std::cout  << "Last name: " << this->_lastName << std::endl;
+    std::cout  << "Nickname: " << this->_nickName << std::endl;
+    std::cout  << "Phone: " << this->_phoneNumber << std::endl;
     std::cout  << "Darkest secret: " << this->_darkestSecret << std::endl;
 }

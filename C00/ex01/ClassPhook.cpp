@@ -27,8 +27,15 @@ Phook::~Phook(void) {
 
 //GETTERS
 
+Contact Phook::getContactByIndex(int index) {
+    return (this->_contacts[index]);
+}
+
 void Phook::getAllContacts(void) {
-    for (int i = 0; i < 8; i++) {
+    int index = this->_index;
+    if (index >= 8)
+        index = 8;
+    for (int i = 0; i < index; i++) {
        this->_contacts[i].toString();
     }
 }
