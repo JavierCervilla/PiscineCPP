@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:10:42 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/28 13:59:47 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/03/29 12:34:20 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ Phook::~Phook(void) {
 }
 
 //GETTERS
+
+int Phook::getIndex(void) {
+    return (this->_index);
+}
 
 Contact Phook::getContactByIndex(int index) {
     return (this->_contacts[index]);

@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:55:03 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/28 14:05:20 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/03/29 12:34:51 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int checkCmd(std::string cmd, Phook *phook) {
         std::cout << "Enter the index of the contact you want to see: ";
         int index;
         std::cin >> index;
+        if (index < 0 || index > 7 || index > phook->getIndex()) {
+            std::cout << "Index out of range" << std::endl;
+            return SEARCH;
+        }
         Contact current = phook->getContactByIndex(index);
         current.print();
         return SEARCH;

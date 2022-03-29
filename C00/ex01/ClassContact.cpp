@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 13:57:52 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/28 13:49:09 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/03/29 12:23:03 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Contact::Contact(void) {
     std::cout << "[Contact]Default Constructor" << std::endl;
+    this->_index = 0;
     return ;
 }
 
