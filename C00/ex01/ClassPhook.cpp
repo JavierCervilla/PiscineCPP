@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:10:42 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/29 12:34:20 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/03/30 14:09:53 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,12 @@ int Phook::getIndex(void) {
     return (this->_index);
 }
 
-Contact Phook::getContactByIndex(int index) {
+Contact &Phook::getContactByIndex(int index) {
     return (this->_contacts[index]);
 }
 
 void Phook::getAllContacts(void) {
-    int index = this->_index;
-    if (index >= 8)
-        index = 8;
-    for (int i = 0; i < index; i++) {
+    for (int i = 0; i < this->_index; i++) {
        this->_contacts[i].toString();
     }
 }

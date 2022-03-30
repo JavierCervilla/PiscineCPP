@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 13:58:01 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/29 12:33:06 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/03/30 14:04:07 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Phook {
         ~Phook(void);
         // GETTERS
         int getIndex(void);
-        Contact getContactByIndex(int index);
+        Contact &getContactByIndex(int index);
         void getAllContacts(void);
         // SETTERS
         void addContact(void);
