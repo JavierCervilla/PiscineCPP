@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:55:03 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/30 14:36:51 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/01 12:15:07 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #include "ClassContact.hpp"
 #include "ClassPhook.hpp"
 
-int checkCmd(std::string cmd, Phook *phook) {
+int checkCmd(Phook *phook) {
+    std::string cmd;
+    std::getline(std::cin, cmd);
     std::string confirmation;
     if (cmd.compare("ADD") == 0) {
         phook->addContact();
@@ -28,38 +30,24 @@ int checkCmd(std::string cmd, Phook *phook) {
         return UNDEFINED;
     }
     if (cmd.compare("SEARCH") == 0) {
-        phook->getAllContacts();
-        std::cout << "Enter the index of the contact you want to see: ";
-        int index;
-        std::cin >> index;
-        if (std::cin.fail()) {
-            std::cin.clear();
-            return UNDEFINED;
-        }
-        std::cout << "ID:" << index << std::endl;
-        if (index >= 0 && index < phook->getIndex()) {
-            phook->getContactByIndex(index).print();
+        if (phook->searchContact() == 0)
             return SEARCH;
-        }
-        return UNDEFINED;
     }
     return UNDEFINED;
 }
 
 int main (void)
 {
-    std::string cmd;
     Phook phook;
-
+    std::cout.clear();
     std::cout << "Enter a command: ADD, SEARCH, EXIT" << std::endl;
     while(true)
     {
-        std::getline(std::cin, cmd);
-        if (checkCmd(cmd, &phook) == EXIT)
+        
+        if (checkCmd(&phook) == EXIT)
             break;
-        cmd.clear();
         std::cin.clear();
-        std::cout << "Enter a command: ADD, SEARCH, EXIT:" << std::endl;
+        //std::cout << "Enter a command: ADD, SEARCH, EXIT:" << std::endl;
     }
     return (0);
 }

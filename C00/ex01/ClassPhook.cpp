@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:10:42 by jcervill          #+#    #+#             */
-/*   Updated: 2022/03/30 14:09:53 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/01 12:00:02 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,22 @@ void Phook::getAllContacts(void) {
     for (int i = 0; i < this->_index; i++) {
        this->_contacts[i].toString();
     }
+}
+
+int Phook::searchContact(void) {
+    this->getAllContacts();
+    std::cout << "Enter the index of the contact you want to see: ";
+    int index;
+    std::cin >> index;
+    if (std::cin.fail()) {
+        std::cin.clear();
+        return 1;
+    }
+    if (index >= 0 && index < this->getIndex()) {
+        this->getContactByIndex(index).print();
+        return 0;
+    }
+    return 0;
 }
 
 //SETTERS
