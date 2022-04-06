@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:55:03 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/01 12:15:07 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/06 12:41:04 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main (void)
         if (checkCmd(&phook) == EXIT)
             break;
         std::cin.clear();
-        //std::cout << "Enter a command: ADD, SEARCH, EXIT:" << std::endl;
+        std::cout << "Enter a command: ADD, SEARCH, EXIT:" << std::endl;
     }
     return (0);
 }
