@@ -6,13 +6,13 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/04/06 14:17:28 by jcervill         ###   ########.fr        #
+#    Updated: 2022/04/06 17:11:54 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = brainz
 
-SRCS = 
+SRCS = main.cpp ZombieClass.cpp newZombie.cpp randomChump.cpp
 
 CXX = clang++
 
