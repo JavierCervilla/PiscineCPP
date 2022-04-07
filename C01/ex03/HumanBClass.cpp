@@ -13,6 +13,7 @@
 #include "HumanBClass.hpp"
 
 HumanB::HumanB(std::string name): _name(name) {
+    _weapon = NULL;
     std::cout << "HumanB (" << _name << ") created." << std::endl;
 }
 
@@ -33,7 +34,9 @@ void HumanB::setWeapon(Weapon& weapon) {
 }
 
 void HumanB::attack(void) {
-    if (!_weapon)
+    if (!_weapon) {
+        std::cout << "HumanB (" << _name << ") cant attack, no weapon." << std::endl;
         return ;
+    }
     std::cout << _name << " attacks with his " << _weapon->getType() << std::endl;
 }
