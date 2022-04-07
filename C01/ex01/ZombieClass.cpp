@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:10:48 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/07 10:57:05 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/07 10:56:52 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ Zombie::~Zombie (void) {
     std::cout << "Zombie (" << tz::getName() <<  ") destroyed." << std::endl;
 }
 
-std::string Zombie::getName() {
-    return (tz::_name);
-}
-
 void Zombie::setName (std::string name) {
     tz::_name = name;
+}
+
+std::string Zombie::getName() {
+    return (tz::_name);
 }
 
 void Zombie::announce( void ) {
