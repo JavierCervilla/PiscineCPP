@@ -6,13 +6,13 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/04/07 13:24:28 by jcervill         ###   ########.fr        #
+#    Updated: 2022/04/07 14:17:59 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = brainz
 
-SRCS = main.cpp WeaponClass.cpp HumanAClass.cpp
+SRCS = main.cpp WeaponClass.cpp HumanAClass.cpp HumanBClass.cpp
 
 CXX = clang++
 
