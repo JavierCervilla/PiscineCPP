@@ -34,4 +34,6 @@ fclean: clean
 
 re: fclean all
 
-checker: all
+test: all
+	./$(NAME)
+.PHONY:	all clean fclean re test
