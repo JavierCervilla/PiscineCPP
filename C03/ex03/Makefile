@@ -6,11 +6,11 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/04/09 16:57:59 by jcervill         ###   ########.fr        #
+#    Updated: 2022/04/11 12:50:15 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = frag
+NAME = diamond
 SRCS = main.cpp ClapTrapClass.cpp ScavTrapClass.cpp FragTrapClass.cpp DiamondTrapClass.cpp
 
 CXX = clang++

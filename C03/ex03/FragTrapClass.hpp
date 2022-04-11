@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 01:04:19 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/11 01:04:19 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/11 11:41:32 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FRAG_TRAP_CLASS_HPP
 # include "ClapTrapClass.hpp"
 
-class FragTrap: public ClapTrap {
+class FragTrap: public virtual ClapTrap {
 
     public:
         FragTrap(void);

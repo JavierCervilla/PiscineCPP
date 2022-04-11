@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 01:27:48 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/11 01:27:48 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/11 12:41:43 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ScavTrapClass.hpp"
 
 
-class DiamondTrap: public FragTrap, public ScavTrap {
+class DiamondTrap: virtual public FragTrap, virtual public ScavTrap {
     private:
         std::string _name;
 
@@ -29,7 +29,7 @@ class DiamondTrap: public FragTrap, public ScavTrap {
         void getStatus( void );
         void whoAmI( void );
         void attack( std::string const & target );
-        std::string getName ( void );
+        std::string getName ( void ) const;
 };
 
 #endif
