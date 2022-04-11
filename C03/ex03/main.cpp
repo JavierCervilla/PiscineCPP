@@ -19,20 +19,25 @@ int main(void)
     noName.getStatus();
     DiamondTrap diamondtrap("With Name");
     diamondtrap.getStatus();
+    diamondtrap.whoAmI();
 
     noName.attack(diamondtrap.getName());
     diamondtrap.takeDamage(noName.getAttackDamage());
     diamondtrap.beRepaired(10);
     diamondtrap.getStatus();
     noName.getStatus();
+    noName.whoAmI();
     noName = diamondtrap;
     noName.getStatus();
-    noName.getStatus();
+    noName.whoAmI();
     noName.setName("New Name");
+    noName.whoAmI();
+    noName.getStatus();
     noName.highFivesGuys();
     noName.guardGate();
     noName.getStatus();
     noName.highFivesGuys();
     noName.getStatus();
+    noName.whoAmI();
     return 0;
 }

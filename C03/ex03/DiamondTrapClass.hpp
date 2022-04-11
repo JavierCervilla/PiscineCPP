@@ -30,6 +30,7 @@ class DiamondTrap: virtual public FragTrap, virtual public ScavTrap {
         void whoAmI( void );
         void attack( std::string const & target );
         std::string getName ( void ) const;
+        void setName(std::string name);
 };
 
 #endif

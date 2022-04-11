@@ -17,7 +17,7 @@ CXX = clang++
 
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra --std=c++98
+CXXFLAGS = -Wall -Werror -Wextra --std=c++98 -Wshadow  -Wno-shadow
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $(SRCS)
