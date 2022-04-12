@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrapClass.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 17:45:16 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/12 11:29:47 by jcervill         ###   ########.fr       */
+/*   Created: 2022/04/11 01:04:19 by jcervill          #+#    #+#             */
+/*   Updated: 2022/04/11 01:04:19 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieClass.hpp"
+#ifndef FRAG_TRAP_CLASS_HPP
+# define FRAG_TRAP_CLASS_HPP
+# include "ClapTrapClass.hpp"
 
-int main () {
-	int N = 7;
-	Zombie *horde = zombieHorde( N,  "zombie" );
+class FragTrap: public ClapTrap {
 
-	for(int i = 0; i < N; i++)
-		horde[i].announce();
+    public:
+        FragTrap(void);
+        FragTrap(std::string name);
+        FragTrap(FragTrap const &src);
+        ~FragTrap(void);
+        FragTrap &operator=(FragTrap const &src);
 
-	delete[] horde;
-	return (0);
-}
+        void highFivesGuys( void );
+        void getStatus( void );
+};
+
+#endif

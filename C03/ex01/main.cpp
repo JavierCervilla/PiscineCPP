@@ -16,15 +16,22 @@
 int main(void)
 {
     ScavTrap noName;
+    noName.getStatus();
     ScavTrap scavtrap("With Name");
+    scavtrap.getStatus();
+
     noName.attack(scavtrap.getName());
     scavtrap.takeDamage(noName.getAttackDamage());
     scavtrap.beRepaired(10);
-    std::cout << "scavtrap [" << scavtrap.getName() << "] has " << scavtrap.getHitPoints() << " hit points and " << scavtrap.getEnergyPoints() << " energy points." << std::endl;
-    std::cout << "NoName [" << noName.getName() << "] has " << noName.getHitPoints() << " hit points and " << noName.getEnergyPoints() << " energy points." << std::endl;
+    scavtrap.getStatus();
+    noName.getStatus();
     noName = scavtrap;
-    std::cout << "scavtrap [" << scavtrap.getName() << "] has " << scavtrap.getHitPoints() << " hit points and " << scavtrap.getEnergyPoints() << " energy points." << std::endl;
-    std::cout << "NoName [" << noName.getName() << "] has " << noName.getHitPoints() << " hit points and " << noName.getEnergyPoints() << " energy points." << std::endl;
-    
+    noName.getStatus();
+    noName.getStatus();
+    noName.setName("New Name");
+    noName.guardGate();
+    noName.getStatus();
+    noName.guardGate();
+    noName.getStatus();
     return 0;
 }

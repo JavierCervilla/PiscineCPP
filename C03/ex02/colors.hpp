@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 17:45:16 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/12 11:29:47 by jcervill         ###   ########.fr       */
+/*   Created: 2022/04/11 00:40:09 by jcervill          #+#    #+#             */
+/*   Updated: 2022/04/11 00:40:09 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieClass.hpp"
+#ifndef COLORS_HPP
+# define COLORS_HPP
 
-int main () {
-	int N = 7;
-	Zombie *horde = zombieHorde( N,  "zombie" );
+# define RED "\033[0;31m"
+# define GREEN "\033[0;32m"
+# define YELLOW "\033[0;33m"
+# define BLUE "\033[0;34m"
+# define MAGENTA "\033[0;35m"
+# define CYAN "\033[0;36m"
+# define RESET "\033[0m"
 
-	for(int i = 0; i < N; i++)
-		horde[i].announce();
+# define BOLD "\033[1m"
+# define UNDERLINE "\033[4m"
+# define REVERSE "\033[7m"
 
-	delete[] horde;
-	return (0);
-}
+#endif

@@ -6,18 +6,18 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/04/09 16:57:59 by jcervill         ###   ########.fr        #
+#    Updated: 2022/04/11 12:50:15 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = clap
-SRCS = main.cpp ClapTrapClass.cpp
+NAME = diamond
+SRCS = main.cpp ClapTrapClass.cpp ScavTrapClass.cpp FragTrapClass.cpp DiamondTrapClass.cpp
 
 CXX = clang++
 
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra --std=c++98
+CXXFLAGS = -Wall -Werror -Wextra --std=c++98 -Wshadow  -Wno-shadow
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $(SRCS)

@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = scav
 SRCS = main.cpp ClapTrapClass.cpp ScavTrapClass.cpp
 
 CXX = clang++

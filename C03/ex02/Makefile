@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = clap
-SRCS = main.cpp ClapTrapClass.cpp
+NAME = frag
+SRCS = main.cpp ClapTrapClass.cpp ScavTrapClass.cpp FragTrapClass.cpp
 
 CXX = clang++
 

@@ -14,6 +14,7 @@
 # define CLAP_TRAP_CLASS_HPP
 # include <iostream>
 # include <string>
+# include "colors.hpp"
 
 class ClapTrap {
     private:
@@ -36,7 +37,7 @@ class ClapTrap {
         unsigned int getHitPoints(void) const;
         unsigned int getEnergyPoints(void) const;
         unsigned int getAttackDamage(void) const;
-
+        virtual void getStatus( void );
 };
 
 #endif

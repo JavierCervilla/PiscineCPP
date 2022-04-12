@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   ScavTrapClass.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 14:28:40 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/10 14:28:40 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/11 12:39:41 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ ScavTrap::~ScavTrap(void) {
 ScavTrap &ScavTrap::operator=(ScavTrap const &src) {
     this->_name = src._name;
     this->_hitPoints = src._hitPoints;
-    this->_energyPoints = src._energyPoints;
+    //this->_energyPoints = src._energyPoints;
     this->_attackDamage = src._attackDamage;
     return *this;
 }
@@ -50,10 +50,10 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &src) {
 void ScavTrap::guardGate( void ) {
     if (this->_gateKeeper == true) {
         this->_gateKeeper = false;
-        std::cout << "ScavTrap [" << BLUE << this->_name << RESET << "]" << BOLD << CYAN <<" is not guarding the gate anymore!" << RESET << std::endl;
+        std::cout << "ScavTrap [" << BLUE << this->_name << RESET << "] is not guarding the gate anymore!" << std::endl;
     } else {
         this->_gateKeeper = true;
-        std::cout << "ScavTrap [" << BLUE << this->_name << RESET  << "]" << BOLD << CYAN <<" is now guarding the gate!" << RESET << std::endl;
+        std::cout << "ScavTrap [" << BLUE << this->_name << RESET << "] is now guarding the gate!" << std::endl;
     }
 }
 
