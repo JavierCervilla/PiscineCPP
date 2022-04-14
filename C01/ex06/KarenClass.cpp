@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 10:51:45 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/08 11:56:15 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/04/12 11:51:40 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,23 +48,17 @@ void Karen::complain(std::string level)
     }
     switch (lvl)
     {
-    case 0:
-        for (int i = 0; i < 4; i++)
-            (this->*functions[i])();
-        break;
-    case 1:
-        for (int i = 1; i < 4; i++)
-            (this->*functions[i])();
-        break;
-    case 2:
-        for (int i = 2; i < 4; i++)
-            (this->*functions[i])();
-        break;
-    case 3:
-        for (int i = 3; i < 4; i++)
-            (this->*functions[i])();
-        break;
-    default:
-        break;
+        case 0:
+            (this->*functions[0])();
+        case 1:
+            (this->*functions[1])();
+        case 2:
+            (this->*functions[2])();
+        case 3:
+            (this->*functions[3])();
+            break;
+        case -1:
+            std::cout << "I am not sure how tired I am today..." << std::endl;
+            break;
     }
 }
