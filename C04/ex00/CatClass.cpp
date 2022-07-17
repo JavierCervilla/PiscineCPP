@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   CatClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2022/07/17 23:52:28 by javier           ###   ########.fr       */
+/*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
+/*   Updated: 2022/07/17 23:52:15 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AnimalClass.hpp"
-#include "DogClass.hpp"
 #include "CatClass.hpp"
 
+Cat::Cat( void ) : Animal("Cat") {
+    std::cout << "Cat constructor called" << std::endl;
+}
 
-int main ( void ) {
-    const Animal* meta = new Animal("Animal");
-    const Animal* j = new Dog();
-    const Animal* k = new Cat();
-    
-    //const Animal* i = new Cat();
-    //std::cout << j->getType() << " " << std::endl;
-    //std::cout << i->getType() << " " << std::endl;
-    
-    k->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-};
+Cat::~Cat( void ) {
+    std::cout << "Cat destructor called" << std::endl;
+}
+
+Cat &Cat::operator=(Cat const &src) {
+    this->_type = src._type;
+    return (*this);
+}
+
+void Cat::makeSound( void ) const {
+    std::cout << "[" << GREEN << this->_type << RESET << "] Miau!" << std::endl;
+}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AnimalClass.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 22:59:33 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/11 22:59:33 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:14:58 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal {
         Animal &operator=(Animal const &src);
         std::string getType( void ) const;
         void setType(std::string type);
-        virtual void makeSound( void );
+        virtual void makeSound( void ) const;
 };
 
 #endif

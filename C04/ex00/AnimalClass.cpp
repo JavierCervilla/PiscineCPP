@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AnimalClass.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:02:59 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/11 23:02:59 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:15:20 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void Animal::setType( std::string type ) {
     this->_type = type;
 }
 
-void Animal::makeSound( void ) {
+void Animal::makeSound( void ) const {
     std::cout << "[" << RED << this->_type << RESET << "] Shhhh.... ** undefined sounds **" << std::endl;
 }

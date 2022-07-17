@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DogClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/04/11 23:21:50 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:23:47 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ Dog &Dog::operator=(Dog const &src) {
     return (*this);
 }
 
-Dog::makeSound( void ) {
+void Dog::makeSound( void ) const {
     std::cout << "[" << GREEN << this->_type << RESET << "] Woof!" << std::endl;
 }

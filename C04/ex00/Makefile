@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
+#    By: javier <javier@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/04/11 12:50:15 by jcervill         ###   ########.fr        #
+#    Updated: 2022/07/17 23:51:48 by javier           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Polymorphism
 
-SRCS = main.cpp AnimalClass.cpp
+SRCS = main.cpp AnimalClass.cpp DogClass.cpp CatClass.cpp
 
 CXX = clang++
 
