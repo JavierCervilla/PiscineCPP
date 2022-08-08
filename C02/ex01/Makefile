@@ -6,7 +6,7 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/04/09 16:57:59 by jcervill         ###   ########.fr        #
+#    Updated: 2022/04/12 12:42:32 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,4 +35,5 @@ re: fclean all
 
 test: all
 	./$(NAME)
+	make fclean
 .PHONY:	all clean fclean re test

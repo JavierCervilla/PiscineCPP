@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 12:53:01 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 15:43:32 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Dog::~Dog( void ) {
 }
 
 Dog &Dog::operator=(Dog const &src) {
+    this->_brain = new Brain(*src._brain);
     this->_type = src._type;
     return (*this);
 }
