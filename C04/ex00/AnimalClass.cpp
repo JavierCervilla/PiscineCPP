@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AnimalClass.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:02:59 by jcervill          #+#    #+#             */
-/*   Updated: 2022/07/17 23:15:20 by javier           ###   ########.fr       */
+/*   Updated: 2022/08/08 11:06:39 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Animal::Animal( std::string type ) : _type(type) {
 }
 
 Animal::Animal( Animal const &src ) {
-    this->_type = src._type;
+    *this = src;
     std::cout << "Animal of type [" << RED << this->_type << RESET << "] born with clone constructor!" << std::endl;
 }
 

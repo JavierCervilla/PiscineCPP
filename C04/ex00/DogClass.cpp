@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DogClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/07/17 23:23:47 by javier           ###   ########.fr       */
+/*   Updated: 2022/08/08 11:06:58 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 Dog::Dog( void ) : Animal("Dog") {
     std::cout << "Dog constructor called" << std::endl;
+}
+
+Dog::Dog(Dog const &src) {
+    *this = src;
+    std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with clone constructor!" << std::endl;
 }
 
 Dog::~Dog( void ) {

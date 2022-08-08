@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   CatClass.cpp                                       :+:      :+:    :+:   */
+/*   WrongCatClass.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 11:06:50 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 11:25:06 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "CatClass.hpp"
+#include "WrongCatClass.hpp"
 
-Cat::Cat( void ) : Animal("Cat") {
-    std::cout << "Cat constructor called" << std::endl;
+WrongCat::WrongCat( void ) : WrongAnimal("WrongCat") {
+    std::cout << "WrongCat constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const &src) {
+WrongCat::WrongCat(WrongCat const &src) {
     *this = src;
     std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with clone constructor!" << std::endl;
 }
 
-Cat::~Cat( void ) {
-    std::cout << "Cat destructor called" << std::endl;
+WrongCat::~WrongCat( void ) {
+    std::cout << "WrongCat destructor called" << std::endl;
 }
 
-Cat &Cat::operator=(Cat const &src) {
+WrongCat &WrongCat::operator=(WrongCat const &src) {
     this->_type = src._type;
     return (*this);
-}
-
-void Cat::makeSound( void ) const {
-    std::cout << "[" << GREEN << this->_type << RESET << "] Miau!" << std::endl;
 }
