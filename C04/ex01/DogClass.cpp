@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 15:43:32 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:05:21 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,14 @@ Dog::Dog(Dog const &src) {
     std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with clone constructor!" << std::endl;
 }
 
+Dog::Dog(Brain const  &src): Animal("Dog") {
+    this->setBrain(src);
+    std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with BRAIN constructor!" << std::endl;
+}
+
 Dog::~Dog( void ) {
-    delete this->_brain;
     std::cout << "Dog destructor called" << std::endl;
+    delete this->_brain;
 }
 
 Dog &Dog::operator=(Dog const &src) {
@@ -35,4 +40,12 @@ Dog &Dog::operator=(Dog const &src) {
 
 void Dog::makeSound( void ) const {
     std::cout << "[" << GREEN << this->_type << RESET << "] Woof!" << std::endl;
+}
+
+Brain *Dog::getBrain( void ) const{
+    return this->_brain;
+}
+
+void Dog::setBrain ( Brain const &brain) {
+    this->_brain = new  Brain(brain);
 }

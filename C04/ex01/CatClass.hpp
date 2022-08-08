@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:23:18 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 12:41:49 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:08:36 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ class Cat : public Animal{
     public:
         Cat(void);
         Cat(Cat const &src);
+        Cat(Brain const &src);
         virtual ~Cat(void);
         Cat &operator=(Cat const &src);
         virtual void makeSound( void ) const;
+        Brain *getBrain() const;
+        void setBrain (Brain const &brain);
 };
 
 #endif

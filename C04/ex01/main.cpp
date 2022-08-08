@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 13:00:36 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:11:17 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ int main(void)
 
     a->setType("🐈");
 
-    *dst = *a;
+/*     *dst = *a;
 
     delete a;
-    std::cout << std::endl;
-    std::cout << dst->getType();
-    std::cout << std::endl;
+
+
+    std::cout << dst->getType(); */
 
     dst->makeSound();
-    std::cout << std::endl;
+
 
     for (size_t i = 0; i < 6; i++)
     {

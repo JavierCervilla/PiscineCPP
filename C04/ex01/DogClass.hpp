@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:23:18 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 12:49:06 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:05:17 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ class Dog : public Animal{
     public:
         Dog(void);
         Dog(Dog const &src);
+        Dog(Brain const &src);
         virtual ~Dog(void);
         Dog &operator=(Dog const &src);
         virtual void makeSound( void ) const;
+        Brain *getBrain() const;
+        void setBrain (Brain const &brain);
 };
 
 #endif
