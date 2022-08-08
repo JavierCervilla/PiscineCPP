@@ -6,14 +6,14 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:22:17 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 16:41:25 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 19:22:46 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 # include <ostream>
-# include "../AMateriaClass.hpp"
+# include "AMateriaClass.hpp"
 
 class ICharacter
 {

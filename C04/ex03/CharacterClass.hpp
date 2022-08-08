@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:38:51 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 17:26:57 by jcervill         ###   ########.fr       */
+/*   Updated: 2022/08/08 21:36:25 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CHARACTER_CLASS_HPP
 # include <ostream>
 # include "colors.hpp"
-# include "interfaces/ICharacter.hpp"
+# include "ICharacter.hpp"
 # include "AMateriaClass.hpp"
 
 class Character : virtual public ICharacter {
