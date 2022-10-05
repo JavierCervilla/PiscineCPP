@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2022/10/05 12:02:36 by javier           ###   ########.fr       */
+/*   Updated: 2022/08/08 16:11:17 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,42 @@
 #include "CatClass.hpp"
 #include "WrongCatClass.hpp"
 
+int main(void)
+{
+    Animal *animal_arr[6];
 
-int main ( void ) {
-    const Animal* meta = new Animal("Animal");
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    Cat *a = new Cat();
 
-    const WrongCat* k =  new WrongCat();
-    
-    std::cout << meta->getType() << " " << std::endl;
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
+    Cat *dst = new Cat();
 
-    std::cout << k->getType() << " " << std::endl;
+    a->setType("🐈");
 
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    k->makeSound();
+/*     *dst = *a;
+
+    delete a;
+
+
+    std::cout << dst->getType(); */
+
+    dst->makeSound();
+
+
+    for (size_t i = 0; i < 6; i++)
+    {
+        if (i < 3)
+            animal_arr[i] = new Dog();
+        else
+            animal_arr[i] = new Cat();
+    }
+
+    for (size_t i = 0; i < 6; i++)
+    {
+        std::cout << "[" << i + 1 << "]"
+                  << "\t" << animal_arr[i]->getType() << " ";
+        animal_arr[i]->makeSound();
+    }
+
+    for (size_t i = 0; i < 6; i++)
+        delete animal_arr[i];
+    delete dst;
 };
