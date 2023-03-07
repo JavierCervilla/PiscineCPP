@@ -6,7 +6,7 @@
 /*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2022/10/05 12:02:36 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/07 13:48:15 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,9 @@ int main ( void ) {
     i->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
+    delete(meta);
     k->makeSound();
+    delete(k);
+    delete(i);
+    delete(j);
 };
