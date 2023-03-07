@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
+#    By: javier <javier@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2023/03/07 17:29:01 by jcervill         ###   ########.fr        #
+#    Updated: 2023/03/07 21:41:01 by javier           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CXX = clang++
 
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra --std=c++98 -Wshadow  -Wno-shadow
+CXXFLAGS = -Wall -Werror -Wextra --std=c++98 -Wshadow  -Wno-shadow -g3
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $(SRCS)

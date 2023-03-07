@@ -1,4 +1,4 @@
-#include "Ice.hpp"
+#include "AMateriaClass.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------

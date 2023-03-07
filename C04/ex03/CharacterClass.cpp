@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   CharacterClass.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:49:32 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 19:04:32 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 21:47:57 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ Character::Character(Character const &src)
 {
     *this = src;
     std::cout << "Character of type [" << RED << this->_name << RESET << "] born with copy constructor!" << std::endl;
+}
+
+Character::~Character(){
+    std::cout << "Character of type [" << RED << this->_name << RESET << "] died with default destructor!" << std::endl;
 }
 
 std::string const &Character::getName() const
@@ -85,12 +89,6 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter &target)
 {
-    if (this->_materias[idx]->getType() == "cure")
-    {
-        std::cout << "* heals " << RED << target.getName() << RESET << " wounds" << std::endl;
-    }
-    else
-    {
-        std::cout << "* shoots an ice bolt at" << RED << target.getName() << RESET << std::endl;
-    }
+    if (this->_materias[idx] != NULL)
+        this->_materias[idx]->use(target);
 }

@@ -1,4 +1,4 @@
-#include "Cure.hpp"
+#include "AMateriaClass.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------

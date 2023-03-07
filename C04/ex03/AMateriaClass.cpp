@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateriaClass.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 20:23:37 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 18:32:20 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 21:25:23 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,6 @@ AMateria &				AMateria::operator=( AMateria const & rhs )
 	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, AMateria const & i )
-{
-	o << "Type = " << i.getType();
-	return o;
-}
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
