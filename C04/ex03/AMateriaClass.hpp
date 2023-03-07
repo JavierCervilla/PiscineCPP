@@ -6,18 +6,18 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 20:17:58 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 21:22:46 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 18:29:57 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_CLASS_HPP
 # define AMATERIA_CLASS_HPP
-
 # include <iostream>
 # include <string>
-# include "ICharacter.hpp"
 # include "colors.hpp"
+# include "ICharacter.hpp"
 
+class ICharacter;
 class AMateria
 {
 	protected:
@@ -29,12 +29,12 @@ class AMateria
 		AMateria(std::string const &type);
 
 		AMateria( AMateria const & src );
-		~AMateria();
+		virtual ~AMateria();
 
 		AMateria &		operator=( AMateria const & rhs );
 
 		std::string const &getType() const; // Returns the materia type
-		virtual AMateria *clone() const;
+		virtual AMateria *clone() const = 0;
 		virtual void use(ICharacter &target);
 };
 

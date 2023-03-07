@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:50:27 by pmedina-          #+#    #+#             */
-/*   Updated: 2022/08/08 21:38:22 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:27:12 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,7 @@
 #include "Ice.cpp"
 #include "Cure.cpp"
 
-void leakicious() {
-	system("leaks bob");
-}
-
 int main() {
-
-	//atexit(leakicious);
-
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -63,8 +56,6 @@ int main() {
 	///////////////////////////////////////////////////////////////
 
 	delete bob, delete me, delete src;
-
-	//system("leaks bob");
 	
 	return 0;
 }

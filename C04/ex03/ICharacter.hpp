@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:22:17 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 19:22:46 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:22:21 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <ostream>
 # include "AMateriaClass.hpp"
 
+class AMateria;
 class ICharacter
 {
     public:

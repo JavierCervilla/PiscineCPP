@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 20:23:37 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 20:40:00 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 18:32:20 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,8 @@ std::string const &AMateria::getType() const {
 	return  this->_type;
 }
 
-AMateria *AMateria::clone() const {
-	std::cout << "Materia of type [" << RED << this->_type << RESET << "] cloned!" << std::endl;
-	AMateria *tmp = new AMateria(this->getType());
-	return  tmp;
-}
-
-void AMateria::use( ICharacter &target ) {
-	std::cout << "Materia of  type [" << RED << this->getType() << "] used against [" << BLUE << "]" << RESET << std::endl;
+void AMateria::use(ICharacter &target) {
+	std::cout << "Materia using for  [" << BLUE << target.getName() << RESET << "]" << std::endl;
 }
 
 /*

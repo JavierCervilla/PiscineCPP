@@ -6,13 +6,13 @@
 #    By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 12:35:53 by jcervill          #+#    #+#              #
-#    Updated: 2022/08/08 16:16:52 by jcervill         ###   ########.fr        #
+#    Updated: 2023/03/07 17:29:01 by jcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Polymorphism
 
-SRCS = main.cpp 
+SRCS = main.cpp AMateriaClass.cpp CharacterClass.cpp Cure.cpp Ice.cpp MateriaSourceClass.cpp
 
 CXX = clang++
 
