@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 16:05:21 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:14:26 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog( void ) : Animal("Dog") {
     std::cout << "Dog constructor called" << std::endl;
 }
 
-Dog::Dog(Dog const &src) {
+Dog::Dog(Dog const &src) : Animal(src) {
     *this = src;
     std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with clone constructor!" << std::endl;
 }

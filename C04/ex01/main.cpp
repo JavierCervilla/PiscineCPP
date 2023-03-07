@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 16:11:17 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:14:15 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 int main(void)
 {
-    Animal *animal_arr[6];
+    size_t num_animals = 10;
+    Animal *animal_arr[num_animals];
 
     Cat *a = new Cat();
 
@@ -25,32 +26,31 @@ int main(void)
 
     a->setType("🐈");
 
-/*     *dst = *a;
+    *dst = *a;
 
     delete a;
 
-
-    std::cout << dst->getType(); */
+    std::cout << dst->getType();
 
     dst->makeSound();
 
-
-    for (size_t i = 0; i < 6; i++)
+    for (size_t i = 0; i < num_animals; i++)
     {
-        if (i < 3)
+        if (i < num_animals / 2)
             animal_arr[i] = new Dog();
         else
             animal_arr[i] = new Cat();
     }
 
-    for (size_t i = 0; i < 6; i++)
+    for (size_t i = 0; i < num_animals; i++)
     {
-        std::cout << "[" << i + 1 << "]"
+        std::cout << "[" << i << "]"
                   << "\t" << animal_arr[i]->getType() << " ";
         animal_arr[i]->makeSound();
     }
 
-    for (size_t i = 0; i < 6; i++)
+    for (size_t i = 0; i < num_animals; i++)
         delete animal_arr[i];
     delete dst;
+
 };
