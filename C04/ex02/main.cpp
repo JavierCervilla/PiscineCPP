@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 12:33:49 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:03:20 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ int main(void)
     Cat *a = new Cat();
 
     Cat *dst = new Cat();
-
+    
     a->setType("🐈");
 
+    *dst = *a;
+    
     dst->makeSound();
 
     for (size_t i = 0; i < animal_count; i++)

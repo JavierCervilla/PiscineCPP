@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   CatClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 13:13:46 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:53:51 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ Cat::Cat( void ) : Animal("Cat") {
     std::cout << "Cat constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const &src): Animal(src) {
+Cat::Cat(Cat const &src) {
     *this = src;
     std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with clone constructor!" << std::endl;
 }
 
-Cat::Cat(Brain const &src): Animal("Dog") {
+Cat::Cat(Brain const &src): Animal("Cat") {
     this->setBrain(src);
     std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with BRAIN constructor!" << std::endl;
 }
@@ -33,6 +33,8 @@ Cat::~Cat( void ) {
 }
 
 Cat &Cat::operator=(Cat const &src) {
+    if (this->_brain)
+        delete this->_brain;
     this->_brain = new Brain(*src._brain);
     this->_type = src._type;
     return (*this);
@@ -47,5 +49,7 @@ Brain *Cat::getBrain( void ) const{
 }
 
 void Cat::setBrain ( Brain const &brain) {
+    if (this->_brain)
+        delete this->_brain;
     this->_brain = new Brain(brain);
 }

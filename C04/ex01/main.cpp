@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 12:14:15 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:55:06 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,13 @@ int main(void)
 
     *dst = *a;
 
-    delete a;
 
     std::cout << dst->getType();
-
+    std::cout << a->getType();
     dst->makeSound();
+
+    delete a;
+    delete dst;
 
     for (size_t i = 0; i < num_animals; i++)
     {
@@ -51,6 +53,4 @@ int main(void)
 
     for (size_t i = 0; i < num_animals; i++)
         delete animal_arr[i];
-    delete dst;
-
 };

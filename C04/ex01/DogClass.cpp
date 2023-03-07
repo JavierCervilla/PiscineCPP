@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DogClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 13:14:26 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:55:54 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ Dog::~Dog( void ) {
 }
 
 Dog &Dog::operator=(Dog const &src) {
+    if (this->_brain)
+        delete this->_brain;
     this->_brain = new Brain(*src._brain);
     this->_type = src._type;
     return (*this);
@@ -47,5 +49,7 @@ Brain *Dog::getBrain( void ) const{
 }
 
 void Dog::setBrain ( Brain const &brain) {
+    if (this->_brain)
+        delete this->_brain;
     this->_brain = new  Brain(brain);
 }
