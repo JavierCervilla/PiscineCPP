@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:23:18 by jcervill          #+#    #+#             */
-/*   Updated: 2022/10/05 11:52:53 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/07 12:43:58 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONG_CAT_CLASS_HPP
 # define WRONG_CAT_CLASS_HPP
 # include <iostream>
-# include "WrongAnimal.hpp"
+# include "WrongAnimalClass.hpp"
 # include "colors.hpp"
 
 class WrongCat : public WrongAnimal{

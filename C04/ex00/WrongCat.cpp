@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2022/10/05 11:55:25 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/07 12:43:44 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ WrongCat::WrongCat( void ) : WrongAnimal("WrongCat") {
     std::cout << "WrongCat constructor called" << std::endl;
 }
 
-WrongCat::~WrongCat( void ) {
+WrongCat::~WrongCat( void ): WrongAnimal(src) {
     std::cout << "WrongCat destructor called" << std::endl;
 }
 
