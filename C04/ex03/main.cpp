@@ -6,7 +6,7 @@
 /*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:50:27 by pmedina-          #+#    #+#             */
-/*   Updated: 2023/03/07 21:38:11 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 12:48:36 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@ int main()
 
 	ICharacter* me = new Character();
 
+	
 	AMateria *tmp;
 	tmp	= src->createMateria("ice");
 	me->equip(tmp);
+	delete tmp;
 	tmp	= src->createMateria("cure");
 	me->equip(tmp);
-
+	delete tmp;
 	////////////////////////////////////////////////////////////////
-
+	
 	me->equip(tmp);
 	me->equip(tmp);
 	me->equip(tmp);
@@ -53,6 +55,6 @@ int main()
 
 	///////////////////////////////////////////////////////////////
 
-	delete bob, delete me, delete src;
+	delete bob, delete me; delete src;
 	return 0;
 }

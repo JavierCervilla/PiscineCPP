@@ -6,7 +6,7 @@
 /*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:49:32 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 21:47:57 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 12:20:26 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,16 @@ Character::Character(std::string name) : _name(name)
 
 Character::Character(Character const &src)
 {
-    *this = src;
+    this->_name = src.getName();
+    for (int i = 0; i < 4; i++)
+    {
+        if (this->_materias[i] != NULL)
+        {
+            delete this->_materias[i];
+            this->_materias[i] = NULL;
+        }
+        this->_materias[i] = src._materias[i]->clone();
+    }
     std::cout << "Character of type [" << RED << this->_name << RESET << "] born with copy constructor!" << std::endl;
 }
 
@@ -63,28 +72,19 @@ Character &Character::operator=(Character const &src)
 void Character::equip(AMateria *m)
 {
     int i = 0;
-    for (i = 0; this->_materias[i] != NULL; i++)
-        if (i < 4)
+    for (i = 0; i < 4; i++)
+        if (this->_materias[i] == NULL)
         {
-            this->_materias[i] = m->clone();
-            std::cout << "Character [" << RED << this->_name << RESET << "] added [" << BLUE << m->getType() << RESET << "] to inventory" << std::endl;
-        }
-        else
-        {
-            std::cout << "Character [" << RED << this->_name << RESET << "] has full inventory and cannot add [" << BLUE << m->getType() << RESET << "] to inventory" << std::endl;
+            this->_materias[i] = m;
+            std::cout << "Character [" << RED << this->_name << RESET << "] added [" << BLUE << this->_materias[i]->getType() << RESET << "] to inventory" << std::endl;
+            break;
         }
 }
 
 void Character::unequip(int idx)
 {
-    int i;
-    for (i = idx; i < 3 && this->_materias[i + 1] != NULL; i++)
-    {
-        AMateria *temp = this->_materias[i];
-        this->_materias[i] = this->_materias[i + 1];
-        this->_materias[i + 1] = temp;
-    }
-    this->_materias[i] = NULL;
+    if (idx >= 0 && idx < 4)
+        this->_materias[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter &target)

@@ -6,7 +6,7 @@
 /*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 20:23:37 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 21:25:23 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 12:18:34 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ AMateria::AMateria( const AMateria & src )
 
 AMateria::~AMateria()
 {
-	std::cout << "Materia of type [" << RED << this->_type << RESET << "] destructed!" << std::endl;
+	std::cout << "AMateria of type [" << RED << this->_type << RESET << "] destructed!" << std::endl;
 }
 
 
