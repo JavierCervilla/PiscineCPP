@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 12:44:14 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:18:21 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,8 @@ WrongCat::~WrongCat( void ) {
 WrongCat &WrongCat::operator=(WrongCat const &src) {
     this->_type = src._type;
     return (*this);
+}
+
+void WrongCat::makeSound( void ) const {
+	std::cout << "Wrong cat Sounds...." << std::endl;
 }

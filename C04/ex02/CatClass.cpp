@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   CatClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:21:50 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 17:05:03 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 15:28:43 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Cat::Cat(void) : Animal("Cat")
 
 Cat::Cat(Cat const &src) : Animal(src)
 {
+    this->_brain = new Brain(*src._brain);
     *this = src;
     std::cout << "Animal of type [" << RED << this->getType() << RESET << "] born with clone constructor!" << std::endl;
 }

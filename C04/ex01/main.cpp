@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:07:07 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/07 16:55:06 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 15:26:47 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ int main(void)
 
     *dst = *a;
 
+	Cat cat = *a;
+
+	std::cout << "CAT Brain: " << cat.getBrain() << std::endl;
+	std::cout << "A Brain: " << a->getBrain() << std::endl;
+	std::cout << "DST Brain: " << dst->getBrain() << std::endl;
 
     std::cout << dst->getType();
     std::cout << a->getType();

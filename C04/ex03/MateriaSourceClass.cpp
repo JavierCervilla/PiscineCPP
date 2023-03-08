@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSourceClass.cpp                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:51:42 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/08 12:45:15 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 13:16:45 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ MateriaSource::MateriaSource(void) : _materias()
 
 MateriaSource::~MateriaSource()
 {
-    std::cout << "I: " << 0 << "\nthis->_materias[0]:" << this->_materias[0] << std::endl;
-    std::cout << "I: " << 1 << "\nthis->_materias[i]:" << this->_materias[1] << std::endl;
-    std::cout << "I: " << 2 << "\nthis->_materias[i]:" << this->_materias[2] << std::endl;
-    std::cout << "I: " << 3 << "\nthis->_materias[i]:" << this->_materias[3] << std::endl;
-
     for (int i = 0; i < 4; i++)
     {
         delete this->_materias[i];

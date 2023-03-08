@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateriaClass.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 20:23:37 by jcervill          #+#    #+#             */
-/*   Updated: 2023/03/08 12:18:34 by javier           ###   ########.fr       */
+/*   Updated: 2023/03/08 13:18:04 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ std::string const &AMateria::getType() const {
 }
 
 void AMateria::use(ICharacter &target) {
-	std::cout << "Materia using for  [" << BLUE << target.getName() << RESET << "]" << std::endl;
+	std::cout << "Materia of type [" << RED << this->getType() << RESET << "] using for  [" << BLUE << target.getName() << RESET << "]" << std::endl;
 }
 
 /*

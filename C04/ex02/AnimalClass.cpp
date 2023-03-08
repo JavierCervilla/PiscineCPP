@@ -6,7 +6,7 @@
 /*   By: jcervill <jcervill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 23:02:59 by jcervill          #+#    #+#             */
-/*   Updated: 2022/08/08 11:06:39 by jcervill         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:37:29 by jcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,4 @@ std::string Animal::getType( void ) const {
 
 void Animal::setType( std::string type ) {
     this->_type = type;
-}
-
-void Animal::makeSound( void ) const {
-    std::cout << "[" << RED << this->_type << RESET << "] Shhhh.... ** undefined sounds **" << std::endl;
 }
